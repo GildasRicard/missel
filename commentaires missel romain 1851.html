@@ -300,11 +300,83 @@
             font-style: italic;
             line-height: 1.8;
         }
+
+        /* Menu latéral discret */
+        .side-nav {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fdfdf8;
+            border: 1px solid #e0e0d0;
+            padding: 12px;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            width: 180px;
+            font-size: 0.8em;
+            font-family: "Georgia", serif;
+        }
+
+        .side-nav table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .side-nav tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .side-nav tr:last-child {
+            border-bottom: none;
+        }
+
+        .side-nav td {
+            padding: 6px 0;
+        }
+
+        .side-nav a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.2s;
+            display: block;
+            font-style: italic;
+        }
+
+        .side-nav a:hover {
+            color: #c0392b;
+            text-decoration: underline;
+        }
+
+        /* Masquer le menu sur les petits écrans pour préserver la lisibilité */
+        @media screen and (max-width: 1250px) {
+            .side-nav {
+                display: none;
+            }
+        }
     </style>
 
 </head>
 
 <body>
+
+    <!-- Menu latéral discret -->
+    <nav class="side-nav">
+        <table>
+            <tr>
+                <td><a href="https://gildasricard.github.io/serrure/">&Eacute;tude serrures</a></td>
+            </tr>
+            <tr>
+                <td><a href="https://gildasricard.github.io/missel/">Missel</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">Lettres pastorales</a></td>
+            </tr>
+            <tr>
+                <td><a href="#">&Eacute;tude lettres pastorales</a></td>
+            </tr>
+        </table>
+    </nav>
 
     <div class="cover-page">
         <h1 class="cover-title">Étude du propre du diocèse de Saint-Brieuc dans le Missale Romanum briochin du XIXᵉ
@@ -334,9 +406,8 @@
                 comment se tisse, dans la liturgie, l’alliance entre identité locale et catholicité universelle. A la
                 fin du document j’ai fait établir une comparaison du culte rendu à Saint-Yves dans le diocèse de
                 Tréguier avant la Révolution, et qu’existait encore une séparation entre les diocèses de Tréguier et de
-                Saint-Brieuc, et le culte qui lui est rendu en 1876 dans le diocèse unifié. Si les documents du 18ème
-                siècle se trouvent en fin de ce document, le propre entier de Saint-Brieuc se trouve sur le site : <a
-                    href="https://gildasricard.github.io/missel/"><em>https://gildasricard.github.io/missel/</em></a>
+                Saint-Brieuc, et le culte qui lui est rendu en 1876 dans le diocèse unifié. Les documents du 18ème
+                siècle se trouvent en fin de ce document.
             </p>
         </div>
     </div>
@@ -578,7 +649,8 @@
                 de Dieu, ce qui renvoie au contexte historique d’une Église bretonne soucieuse d’orthodoxie et de
                 réforme intérieure au XIXᵉ siècle. L’oratio articule donc mémoire hagiographique et exhortation
                 implicite à l’épiscopat contemporain : Corentin, figure ancienne, devient type de l’évêque moderne
-                appelé à être vraiment « vicaire de la charité ».</p>
+                appelé à être vraiment « vicaire de la charité ».
+            </p>
         </section>
         <section id="loratio-de-sainte-geneviève" class="level2">
             <h2>L’oratio de sainte Geneviève</h2>
@@ -601,7 +673,8 @@
                 la foi, reçue comme lumière intérieure, et les œuvres, fruits visibles de la charité, s’unissent pour
                 rendre l’existence agréable à Dieu. Geneviève apparaît ainsi comme une figure de synthèse entre la
                 tradition des vierges martiales protectrices des villes et une spiritualité plus intérieure, centrée sur
-                la connaissance aimante de Dieu et sur la cohérence entre foi et praxis.</p>
+                la connaissance aimante de Dieu et sur la cohérence entre foi et praxis.
+            </p>
             <p>Si l’on lit ces trois oraisons ensemble, dans l’ordre du missel, se dessine une sorte de triptyque de la
                 sainteté bretonne (même si Geneviève est parisienne et non bretonne), où se répondent trois axes
                 théologiques complémentaires. Tugdual représente la purification des désirs par la charité et la
@@ -635,7 +708,8 @@
                 où la veuve est valorisée comme état capable d'une sainteté particulière, non par dérogation, mais par
                 grâce spéciale, et son culte devient occasion pour les femmes mariées de contempler la possibilité d'une
                 <em>rededicatio</em> totale après le décès du mari ou au terme du mariage, en imitation du détachement
-                de Jeanne.</p>
+                de Jeanne.
+            </p>
         </section>
         <section id="saint-paterne" class="level2">
             <h2>Saint Paterne</h2>
@@ -657,7 +731,8 @@
                 <em>fidelitas</em> dans la gestion renvoie implicitement aux controverses médiévales et modernes sur la
                 simonie et la corruption du clergé, et fait de Paterne un modèle de probité épiscopale, particulièrement
                 important pour un diocèse sortant de la Révolution française et soucieux de restaurer la crédibilité
-                morale des ministres.</p>
+                morale des ministres.
+            </p>
         </section>
         <section id="saint-magloire" class="level2">
             <h2>Saint Magloire</h2>
@@ -715,7 +790,8 @@
                 est défini par la conjugalité du salut des âmes et de la défense juridique des pauvres, ce qui
                 singularise fortement l’office dans l’ensemble du Commun des confesseurs, où la mention des
                 <em>pauperes</em> — « les pauvres » — est fréquente, mais rarement configurante à ce point de l’identité
-                du saint.</p>
+                du saint.
+            </p>
             <p>La seconde partie de l’oraison demande : <em>praesta, quaesumus, ut…</em> — « accorde, nous t’en
                 supplions, que… » — <em>ejusdem nos tribuas et caritatem imitari, et apud te patrociniis communiri</em>
                 — « que tu nous accordes à la fois d’imiter sa charité et d’être fortifiés par son patronage auprès de
@@ -733,7 +809,8 @@
                 d’avocat de la terre. La théologie sous-jacente esquisse une continuité réelle entre l’exercice
                 terrestre du droit en faveur des pauvres et la fonction d’intercession céleste, ce qui suppose une
                 valorisation positive du for juridique comme lieu de charité active, et non comme simple accommodation
-                mondaine.</p>
+                mondaine.
+            </p>
             <p>Les formulaires de la messe de saint Yves empruntent au Commun <em>Justus ut palma</em> — « [Le] juste
                 [fleurira] comme le palmier » —, mais la coloration donnée par l’oraison propre infléchit la perception
                 de l’ensemble. Les pièces scripturaires traditionnelles du <em>justus</em> — « le juste » —, psaume 111,
@@ -785,7 +862,8 @@
                 théologie des reliques et des translations vient alors compléter la théologie du ministère : Yves ne se
                 contente plus de protéger les pauvres devant les tribunaux humains, son corps, déposé dans l’église,
                 devient le signe durable que la communauté ne peut se dire fidèle au Christ qu’en se tenant du côté des
-                plus vulnérables.</p>
+                plus vulnérables.
+            </p>
             <p>Enfin, le choix de ne pas multiplier les images extraordinaires ou les hyperboles dans ces textes, mais
                 de travailler à l’intérieur du lexique classique de la liturgie romaine, manifeste un souci
                 d’intégration et de sobriété propre au XIXᵉ siècle ultramontain. La sainteté de saint Yves n’est pas
@@ -797,7 +875,8 @@
                 prêtre où la <em>dignitas forensis</em> — « dignité propre au for / au tribunal » — et le
                 <em>ministerium evangelicum</em> — « ministère évangélique » — se rejoignent sans confusion. Le propre
                 briochin propose ainsi, par ces textes, une véritable petite théologie du ministère sacerdotal et du
-                droit comme lieu de charité, qui pourrait être confrontée utilement aux débats contemporains.</p>
+                droit comme lieu de charité, qui pourrait être confrontée utilement aux débats contemporains.
+            </p>
         </section>
         <section id="loffice-de-la-canonisation-de-saint-guillaume" class="level2">
             <h2>L’office de la canonisation de saint Guillaume</h2>
@@ -836,7 +915,8 @@
                 de ton Seigneur ». Cette parabole, choisie pour la messe propre, résonne comme un commentaire
                 hagiographique de la vie de Guillaume, exilé pour sa fidélité mais récompensé par la canonisation,
                 invitant les clercs et fidèles à multiplier les dons reçus dans la <em>cura pastoralis</em> — « charge
-                pastorale ».</p>
+                pastorale ».
+            </p>
             <p>L’offertoire et la secrète prolongent cette économie de la fidélité : « <em>Non quæro quæ vestra sunt,
                     sed vos</em> » — « Je ne cherche pas ce qui est à vous, mais vous-mêmes » —, inspiré des épîtres
                 pauliniennes, évoque un ministère désintéressé centré sur les âmes ; la secrète demande que les hosties
@@ -852,7 +932,8 @@
                 de Guillaume — nourricier des pauvres, bâtisseur de cathédrale, victime de Mauclerc — modèle l’Église
                 locale à la fidélité active, à la <em>dispensatio divina</em> — « dispensation divine » — et à la
                 <em>timor filialis</em> — « crainte filiale » — qui mène aux noces de l’Agneau, en un équilibre parfait
-                entre mémoire bretonne et norme romaine tridentine.</p>
+                entre mémoire bretonne et norme romaine tridentine.
+            </p>
         </section>
         <section id="la-messe-de-saint-brieuc" class="level2">
             <h2>La messe de saint Brieuc </h2>
@@ -862,7 +943,8 @@
                 susciterai sur mes brebis un pasteur »), une oraison, une Épître de 1 Corinthiens 3 (sur la plantation,
                 l’arrosage et l’édification ecclésiale), un Évangile de Matthieu 10 (mission des disciples), un
                 Offertoire de Romains 15 et une Secrète, une Communion de 1 Thessaloniciens 2, une <em>Postcommunio</em>
-                dédiée.</p>
+                dédiée.
+            </p>
             <p>L’oraison centrale (<em>« Deus, qui gentis nostrae primicias, beati Brioci Pontificis tui praedicatione
                     et miraculis, discere disposuisti legem vitae et disciplinae »</em> — « Dieu, toi qui as disposé que
                 les prémices de notre nation apprennent, par la prédication et les miracles du bienheureux Brieuc ton
@@ -905,7 +987,8 @@
                 sacrées » — <em>« spirant »</em> — « respirent, insufflent » — une piété que les fidèles doivent imiter
                 <em>« propensius »</em> — « plus intensément ». Brieuc enseigne par sa doctrine, protège par son
                 <em>patrocinium</em> — « patronage » —, et ses restes physiques continuent d’animer la dévotion, faisant
-                de la translation un acte de vitalisation charnelle de la sainteté locale.</p>
+                de la translation un acte de vitalisation charnelle de la sainteté locale.
+            </p>
             <p>La récurrence de la Secrète et de la parabole des talents (comme pour Paterne et Guillaume) souligne
                 l’unité thématique : le <em>Praesul</em> — « prélat, pasteur en charge » — comme intendant fidèle des
                 biens divins, dont les reliques assurent la présence pastorale continue.</p>
@@ -931,7 +1014,8 @@
                 <em>Alleluia</em> (<em>« Ossa ipsius visitata sunt, et post mortem prophetaverunt »</em> — « Ses os
                 furent visités, et après sa mort ils prophétisèrent ») ; Évangile de Matthieu 23 (Jésus aux scribes :
                 envoi de prophètes lapidés, accumulation du <em>« sanguis justus »</em> — « sang du juste » — d’Abel à
-                Zacharie) ; Offertoire de Daniel 9 ; Credo et octave.</p>
+                Zacharie) ; Offertoire de Daniel 9 ; Credo et octave.
+            </p>
             <p>L’oraison (<em>« Omnipotens sempiterne Deus, qui beati Stephani Martyris tui sacrum corpus revelare
                     dignatus es : concede, quaesumus ; ut ejus intercessione ab instantibus malis liberati, aeternis
                     consolationibus repleamur »</em> — « Dieu tout‑puissant et éternel, toi qui as daigné révéler le
@@ -954,7 +1038,8 @@
                 éveillé en nos esprits l’espérance de la vie immortelle : accorde qu’ayant reçu l’aliment d’immortalité,
                 nous méritions de parvenir à la béatitude éternelle ») culmine en une eschatologie : l’Invention excite
                 <em>« spem immortalitatis »</em> — « l’espérance d’immortalité », et l’eucharistie comme <em>«
-                    immortalitatis alimentum »</em> — « aliment d’immortalité » — mène à la béatitude éternelle.</p>
+                    immortalitatis alimentum »</em> — « aliment d’immortalité » — mène à la béatitude éternelle.
+            </p>
             <p>Les choix de lectures sont d’une cohérence dramatique : l’Épître (Actes 7 : vision céleste d’Étienne,
                 lapidation, persécution menant à la dispersion évangélisatrice) narre la mort et l’inhumation pieuse ;
                 l’Évangile prophétise le martyre des envoyés, avec le sang d’Étienne comme pivot dans la chaîne des
@@ -1043,7 +1128,8 @@
                 apôtres armoricains. Théologiquement, il culmine l'ensemble en une dynamique de <em>propagatio</em> et
                 <em>incrementum</em> spirituel, où l'intercession épiscopale locale assure la croissance de l'Église
                 militante, écho tridentin à la Contre-Réforme bretonne face aux défis républicains, unifiant les saints
-                diocésains en une chaîne apostolique pour le salut communautaire.</p>
+                diocésains en une chaîne apostolique pour le salut communautaire.
+            </p>
             <p>Le propre de Saint-Brieuc témoigne très nettement de la manière dont un diocèse français de la seconde
                 moitié du XIXᵉ siècle a tenté d’articuler stricte romanité tridentine et valorisation de saints locaux,
                 au moyen d’un latin délibérément sobre, pétri de réminiscences scripturaires, mais soigneusement épuré
@@ -1086,7 +1172,8 @@
                 modèle, aisément utilisable dans une catéchèse morale diocésaine. Le silence sur tout élément narratif
                 signale un choix conscient : là où les anciens bréviaires médiévaux auraient aligné des détails
                 merveilleux, le missel briochin de 1851 préfère une stylisation théologique compatible avec la critique
-                historique naissante et la volonté romaine de limiter les excès hagiographiques.</p>
+                historique naissante et la volonté romaine de limiter les excès hagiographiques.
+            </p>
         </section>
         <section id="saint-maurilius" class="level2">
             <h2>Saint Maurilius</h2>
@@ -1126,7 +1213,8 @@
                 mais aussi orthodoxie doctrinale, dans un climat où le modernisme n’est pas encore nommé, mais où la
                 méfiance envers certaines idées « contaminantes » est déjà sensible. L’abbé saint Maurilius est ainsi
                 utilisé comme figure synthétique du religieux qui, ayant quitté le monde, aide les laïcs à vivre dans le
-                monde sans se laisser gagner par son influence.</p>
+                monde sans se laisser gagner par son influence.
+            </p>
             <p>Si l’on compare ces deux propriums avec ceux d’autres saints bretons plus « importants », comme Tugdual,
                 Corentin ou Brieuc, la différence de traitement saute aux yeux. Tugdual, par exemple, reçoit une oraison
                 qui rappelle plus explicitement sa fonction pastorale et sa mission de conversion de la « <em>gens
@@ -1158,7 +1246,8 @@
                 le diocèse de Saint-Brieuc montre que la tradition hagiographique bretonne, pour survivre, a dû se
                 laisser traduire dans la langue théologique et spirituelle d’un catholicisme ultramontain qui privilégie
                 la sobriété liturgique, la moralisation de la piété et l’universalisation des figures locales par la
-                typification des vertus plutôt que par la conservation des contours anecdotiques.</p>
+                typification des vertus plutôt que par la conservation des contours anecdotiques.
+            </p>
         </section>
         <section id="loffice-de-la-canonisation-de-saint-guillaume-1" class="level2">
             <h2>L’office de la canonisation de saint Guillaume </h2>
@@ -1197,7 +1286,8 @@
                 crainte). Cette accentuation du « <em>timor Domini</em> » (crainte du Seigneur) comme atmosphère de la
                 sanctification est typique de la sensibilité spirituelle française post révolutionnaire : elle tempère
                 et encadre la ferveur affective par une insistance sur le sérieux, la vigilance, la discipline
-                intérieure.</p>
+                intérieure.
+            </p>
             <p>La lecture du livre de l’Ecclésiastique (Eccli 50) applique au nouveau canonisé le portrait classique du
                 « <em>sacerdos magnus</em> » (grand prêtre) qui « <em>in vita sua suffulsit domum, et in diebus suis
                     corroboravit templum</em> » (dans sa vie il a soutenu la maison, et en ses jours il a affermi le
@@ -1224,7 +1314,8 @@
                     manuum</em> » (intelligence de ses actes / de ses œuvres)). Guillaume est présenté comme «
                 <em>princeps sanctorum gentis suae</em> » (chef des saints de son peuple), formule remarquable qui fait
                 apparaître une strate hagiographique nationale : l’évêque breton canonisé devient chef de la sainteté de
-                son peuple, figure de proue d’une identité catholique locale assumée devant Rome.</p>
+                son peuple, figure de proue d’une identité catholique locale assumée devant Rome.
+            </p>
             <p>L’Évangile de la parabole des talents (Matthieu 25) offre le cadre narratif dans lequel la vie de
                 Guillaume est implicitement relue : Dieu, maître qui confie des « <em>talenta</em> » (talents) en
                 proportion des forces de chacun, revient demander compte du profit accompli. Le choix de ce passage pour
@@ -1390,7 +1481,8 @@
                 écoutent en silence, et qui fouille les dossiers obscurs pour que nul pauvre ne soit sacrifié à l’ombre
                 des procédures. La justice n’est pas ici un concept abstrait : elle a le visage du défenseur qui <em>«
                     conterebat molas iniqui »</em> (« brisait les mâchoires de l’inique »), qui brise les mâchoires de
-                l’injuste pour arracher la proie qu’il tient dans ses dents.</p>
+                l’injuste pour arracher la proie qu’il tient dans ses dents.
+            </p>
             <p>L’oraison propre du XVIIIᵉ siècle prolonge ce trait en le condensant en trois formules presque notariales
                 : <em>« pauperibus patrem, viduis patronum, pupillis tutorem »</em> (« père des pauvres, protecteur des
                 veuves, tuteur des orphelins »). Ainsi l’autel assume la rumeur populaire : Yves n’est pas seulement un
@@ -1425,7 +1517,8 @@
                 translation d’octobre, enfin, reprend la messe du 19 mai et lui ajoute une collecte où l’on vénère ses
                 os <em>« pio amore »</em> (« avec pieux amour »), attendant d’eux, selon la théologie des reliques, une
                 <em>« gratiam gaudiorum spiritualium »</em> (« grâce de joies spirituelles »). Le culte est profondément
-                local : on célèbre la proximité tangible d’un corps saint, protecteur des campagnes et des cours.</p>
+                local : on célèbre la proximité tangible d’un corps saint, protecteur des campagnes et des cours.
+            </p>
             <p>Un siècle plus tard, dans le Missel de Saint-Brieuc, le paysage a changé, mais l’âme demeure. La messe du
                 19 mai s’inscrit désormais dans un Propre diocésain harmonisé avec le <em>Missale Romanum</em>, et
                 commence par un autre verset, emprunté au psaume 91 : <em>« Justus ut palma florebit, sicut cedrus
